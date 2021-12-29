@@ -116,17 +116,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias ccat='pygmentize -g'
-export PATH=$PATH:~/go/
+
 alias cleanps1='PS1="\[\e[0;38;5;227m\]\h\[\e[0;38;5;227m\]:\[\e[0;38;5;227m\]\W \[\e[0;38;5;227m\]\u \[\e[0;38;5;227m\]\$ \[\e[0m\]"'
 
-alias ..='cd ..'
 alias rake='bundle exec rake'
-alias tmux="TERM=screen-256color-bce tmux"
 
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+# Install Ruby Gems to ~/.gems
+export GEM_HOME="$HOME/.gems"
+export PATH="$HOME/.gems/bin:$PATH"
 
 
 
