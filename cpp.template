@@ -1,0 +1,14 @@
+/**
+ * @author      : {{NAME}} ({{EMAIL}})
+ * @file        : {{FILE}}
+ * @created     : {{TIMESTAMP}}
+ */
+
+#include <bits/stdc++.h>
+
+using namespace std ; 
+
+int main()
+{
+
+}
