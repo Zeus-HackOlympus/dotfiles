@@ -1,9 +1,13 @@
 set nocompatible 
 filetype off 
+set guicursor=
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'powerline/powerline-fonts'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 
 set number 
@@ -16,7 +20,7 @@ set showmatch
 set laststatus=2
 set ruler 
 
-map <F5> :NerdTreeToggle<CR>
+map <F5> :NERDTreeToggle<CR>
 syntax enable 
 filetype plugin indent on 
 set tabstop=4
@@ -39,6 +43,7 @@ Plug 'bluz71/vim-moonfly-colors'
 Plug 'fcpg/vim-orbital'
 Plug 'morhetz/gruvbox'
 Plug 'patstockwell/vim-monokai-tasty'
+"Plug 'bogado/file-line'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
