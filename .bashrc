@@ -115,16 +115,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
-alias cleanps1='PS1="\[\e[0;38;5;227m\]\h\[\e[0;38;5;227m\]:\[\e[0;38;5;227m\]\W \[\e[0;38;5;227m\]\u \[\e[0;38;5;227m\]\$ \[\e[0m\]"'
-
-alias rake='bundle exec rake'
-
-# Install Ruby Gems to ~/.gems
-export GEM_HOME="$HOME/.gems"
-export PATH="$HOME/.gems/bin:$PATH"
-
-
-
-
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+alias fedubps1='PS1="\[\e[0;1m\][\[\e[0;1;38;5;77m\]\u\[\e[0;1;38;5;77m\]@\[\e[0;1;38;5;77m\]\h \[\e[0;1;38;5;38m\]\W\[\e[0;1m\]]\[\e[0;1m\]$ \[\e[0m\]"'
+alias allgreenps1='export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\u@\h \W]\\$ \[$(tput sgr0)\]"'
+export PATH=$PATH:/home/zeus/Documents/pwncollege/pwnsh/scripts
+export PATH=$PATH:/opt/pwnsh/scripts
+           
