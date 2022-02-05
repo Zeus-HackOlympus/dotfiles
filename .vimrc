@@ -1,0 +1,67 @@
+set nocompatible 
+filetype off 
+set guicursor=
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'powerline/powerline-fonts'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+call vundle#end()
+
+set clipboard=unnamedplus
+set number 
+set relativenumber 
+set wrap 
+set encoding=utf-8
+set mouse=a
+set wildmenu 
+set lazyredraw 
+set showmatch 
+set laststatus=2
+set ruler 
+
+
+map <F6> :NERDTreeToggle<CR>
+syntax enable 
+filetype plugin indent on 
+
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set autoindent 
+set smartindent
+
+set incsearch 
+set hlsearch 
+
+nnoremap <CR> :nohlsearch<CR><CR>
+
+call plug#begin()
+Plug 'preservim/nerdtree'
+Plug 'tibabit/vim-templates'
+Plug 'ajmwagar/vim-deus'
+Plug 'bluz71/vim-moonfly-colors'
+Plug 'fcpg/vim-orbital'
+Plug 'morhetz/gruvbox'
+Plug 'patstockwell/vim-monokai-tasty'
+"Plug 'bogado/file-line'
+call plug#end()
+
+let g:airline_powerline_fonts = 1
+let g:tmpl_search_paths = ['~/.vim/templates']
+let g:tmpl_author_name = 'HackOlympus'
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+autocmd filetype cpp nnoremap <f5> :w <bar> !g++ -std=c++11 -O2 -Wall % -o %:r && ./%:r <cr>
+command Run :w <bar> !./run <cr>
+set guifont=Hack\ 13
