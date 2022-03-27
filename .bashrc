@@ -119,8 +119,17 @@ export BAT_PAGER=""
 
 alias ps1-starship='eval "$(starship init bash)"'
 alias ps1-minimal='PS1="\[\e[0;1;38;5;48m\]➜ \[\e[0;1;38;5;51m\]\W \[\e[0m\]"'
+alias gdb-gef='gdb -ex "source ~/.gef.py" -ex "source ~/.decomp2gef.py"'
 ps1-minimal
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+alias sr='screen -R'
+
+
+export PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH" 
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-export PATH="$PATH:$HOME/.local/bin"
+export PATH=$PATH:/home/zeus/.tools/pwnsh/scripts
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/
+
+eval "$(rbenv init -)"
+. /etc/profile.d/vte.sh
