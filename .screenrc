@@ -1,5 +1,5 @@
 hardstatus alwaysignore 
-caption always "%{= kG}[ %S %> | %> %{= kw}%-w%{+ kr}%n*%t%?(%u)%? %{-}%+w %{= kG} %= %?%E%{+s}%?%w]"
+caption always "%{= kG}[ %S %> | %> %{= kw}%-w%{+ kr}%n*%t%?(%u)%? %{-}%+w %{= kG} %= %?%E%{+sdd}ctrl%{= kG}%?]"
 
 
 # 256 colors
