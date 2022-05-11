@@ -13,4 +13,7 @@ mousetrack on
 # for vim background issue 
 altscreen on
 
+term xterm-256color
+defshell -bash 
+
 bind s split 

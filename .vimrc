@@ -67,3 +67,10 @@ noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> !g++ -std=c++11 -O2 -Wall % -o ./a.out    
 autocmd filetype cpp nnoremap <F5> :w <bar> !printf "give input :\n" &&(time ./a.out)   
 autocmd filetype cpp nnoremap <F6> :w <bar> !./run
+
+
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color GNU screen.
+  set t_ut=
+endif
