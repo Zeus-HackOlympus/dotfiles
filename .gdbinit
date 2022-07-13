@@ -1,5 +1,7 @@
-set debuginfod enabled off
-set pagination off 
+source /opt/pwndbg/gdbinit.py
+#source /opt/gef/gef.py
+#source /opt/peda/peda.py
+
 set disassembly-flavor intel
-#source ~/.gef-e95b072f5684857ffd3d3c95c3369f83cdba0dee.py
-#source ~/.decomp2gef.py
+set disable-randomization off
+set follow-fork-mode child

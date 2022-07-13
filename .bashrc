@@ -72,29 +72,9 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -117,11 +97,6 @@ if ! shopt -oq posix; then
 fi
 export BAT_PAGER="" 
 
-alias ps1-starship='eval "$(starship init bash)"'
-alias ps1-minimal='PS1="\[\e[0;1;38;5;48m\]➜ \[\e[0;1;38;5;51m\]\W \[\e[0m\]"'
-alias gdb-gef='gdb -ex "source ~/.gef.py" -ex "source ~/.decomp2gef.py"'
-ps1-minimal
-alias sr='screen -R'
 
 
 export PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
@@ -130,6 +105,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH=$PATH:/home/zeus/.tools/pwnsh/scripts
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/
+export WORKON_HOME=$HOME/.virtualenvs
+source ~/.local/bin/virtualenvwrapper.sh
 
-eval "$(rbenv init -)"
-. /etc/profile.d/vte.sh
+ps1-minimal
